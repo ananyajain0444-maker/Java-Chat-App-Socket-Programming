@@ -119,26 +119,37 @@ Benefits:
 
 ---
 
-# 💬 Message Sequence
+# 💬 Message Flow
 
-![Message Sequence](images/message_sequence.png)
+This diagram explains how messages travel through the Java Chat Server between multiple clients.
+
+![Message Flow](images/message_flow.png)
 
 Example:
 
 ```
 Client A
    |
-   |  Hello
+   |  Sends Message
    |
-Server
+   ▼
+Java Chat Server
    |
-   |  Forward Message
+   |  Processes & Routes Message
    |
-Client B
+   ├──────────────► Client B
+   |
+   └──────────────► Client C
 ```
 
-The server acts as the central communication manager.
+The Java Chat Server acts as the central communication manager. It receives messages from clients, processes them, and forwards them to the appropriate connected users.
 
+This demonstrates:
+
+- Real-time message transmission
+- Server-side message routing
+- Multi-client communication
+- Centralized chat management
 ---
 
 # 🛠️ Technologies Used
