@@ -152,6 +152,67 @@ This demonstrates:
 - Centralized chat management
 ---
 
+
+# 🔄 Complete Project Workflow
+
+This diagram represents the complete workflow of the Java Chat Application from server startup to real-time communication between multiple users.
+
+![Project Workflow](images/project_workflow.png)
+
+Workflow:
+
+```
+Start Java Chat Server
+          |
+          |  ServerSocket starts listening
+          |
+          ▼
+Client Connects to Server
+          |
+          |  Socket connection established
+          |
+          ▼
+User Enters Username
+          |
+          |  User authentication and registration
+          |
+          ▼
+ClientHandler Thread Created
+          |
+          |  Dedicated thread handles client communication
+          |
+          ▼
+User Sends Message
+          |
+          |  Server receives and processes message
+          |
+          ▼
+Message Broadcasting
+          |
+          |  Message forwarded to connected clients
+          |
+          ▼
+Users Receive Messages
+          |
+          |  Real-time chat communication
+          |
+          ▼
+Chat History Logging
+          |
+          |  Messages stored in chat_history.log
+```
+
+The workflow demonstrates the complete lifecycle of the application including server initialization, client connection handling, multithreaded communication, message processing, broadcasting, and chat history storage.
+
+This highlights:
+
+- Client-server architecture
+- TCP socket communication
+- Multithreading implementation
+- Real-time message exchange
+- File-based chat logging
+---
+
 # 🛠️ Technologies Used
 
 | Technology | Purpose |
